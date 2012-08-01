@@ -1,0 +1,5 @@
+# collect my scripts
+
+cvsadd
+  Add a new directory into CVS recursively.
+  usage: cvsadd <directory>
