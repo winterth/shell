@@ -3,3 +3,6 @@
 cvsadd
   Add a new directory into CVS recursively.
   usage: cvsadd <directory>
+
+.vimrc
+  The configure file of VIM
