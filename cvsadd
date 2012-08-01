@@ -1,0 +1,12 @@
+#! /bin/sh
+if [ -z "$1" ]; then
+echo "usage: cvsadd <directory>"
+exit 1
+fi
+
+if [ -d "$1" ]; then
+find $1 -type d \! -name CVS -exec cvs add '{}' \;
+find $1 \( -type d -name CVS -prune \) -o \( -type f -exec cvs add '{}' \; \)
+else
+echo "$1 is not a directory"
+fi
