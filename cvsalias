@@ -1,0 +1,4 @@
+alias cvsdiff='cvs diff -upN'
+alias cvswhat='cvs -nq update  | egrep '\''^(C|M|A|U|R)'\'''
+alias cvswhatm='cvs -nq update  | egrep '\''^(M)'\'''
+alias cvswhatc='cvs -nq update  | egrep '\''^(C)'\'''

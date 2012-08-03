@@ -6,3 +6,6 @@ cvsadd
 
 .vimrc
   The configure file of VIM
+
+cvsalias
+  Some CVS aliases.
