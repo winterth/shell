@@ -2,6 +2,8 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+call pathogen#infect()
+
 """"""""""""""""""""""""""""  GVIM  """"""""""""""""""""""""""""""
 if has("gui_running")
         au GUIENTER * simalt ~x
@@ -10,10 +12,6 @@ endif
 
 
 """""""""""""""""""""""""""""  MAP  """"""""""""""""""""""""""""""
-" With a map leader it's possible to do extra key combinations
-"let mapleader = "<F11>"
-"let g:mapleader = "<F11>"
-
 " Set 256 color
 set t_Co=256
 
@@ -48,7 +46,7 @@ else
 endif
 
 nnoremap <F5> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>:<Esc>
-nnoremap <F6> :set nohls<CR>:<Esc>
+"nnoremap <F6> :set nohls<CR>:<Esc>
 
 " Move the cusor to middle of matched symbol.
 let g:mapCusorEnabled = 0
@@ -190,11 +188,4 @@ cs a $LW_PROJ_DIR/cscope.out
 "if filereadable("cscope.out")
 "	cs add cscope.out
 "endif
-nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
