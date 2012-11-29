@@ -2,15 +2,20 @@
 
 * cvsadd
   Add a new directory into CVS recursively.
+
   `usage: cvsadd <directory>`
 
-.vimrc
+* .vimrc
+
   The configure file of VIM
 
-cvsalias
+* cvsalias
+
   Some CVS aliases.
 
-git-completion.bash
+* git-completion.bash
+````bash
 if [ -f /path/to/git-completion.bash ]; then
     . /path/to/git-completion.bash
 fi
+````
